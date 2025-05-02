@@ -417,7 +417,7 @@ pub fn pre_process_input(content: &[u8], extension: &str) -> Vec<u8> {
         "json" => Json.process(content),
         "pug" => Pug.process(content),
         "rb" | "erb" => Ruby.process(content),
-        "slim" => Slim.process(content),
+        "slim" | "slang" => Slim.process(content),
         "svelte" => Svelte.process(content),
         "vue" => Vue.process(content),
         _ => content.to_vec(),
